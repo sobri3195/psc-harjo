@@ -1,7 +1,7 @@
 {
-  "name": "psc-harjo",
+  "name": "emr-system",
   "version": "1.0.0",
-  "description": "PSC Harjo - Pusat Servis Cepat Harjo Landing Page",
+  "description": "Emergency Medical Response System - Sistem Emergency Medical Response Terintegrasi",
   "type": "module",
   "scripts": {
     "dev": "vite",

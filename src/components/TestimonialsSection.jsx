@@ -1,62 +1,62 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Star, Quote, MapPin, Car, Wrench, CheckCircle } from 'lucide-react'
+import { Star, Quote, MapPin, Heart, Users, Activity, CheckCircle } from 'lucide-react'
 
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Budi Santoso",
-      location: "Jakarta Selatan",
+      name: "Dr. Sari Wijayanti",
+      location: "RS Harapan Sehat - Jakarta",
       rating: 5,
-      text: "Servis di PSC Harjo sangat memuaskan! Pengerjaan cepat dan rapi. Teknisi sangat profesional dan menjelaskan kondisi kendaraan dengan detail. Sangat recommended!",
-      service: "Servis Berkala",
-      vehicle: "Toyota Avanza",
+      text: "EMR System telah mengubah cara kami menangani emergency medical response. Response time menurun drastis dan koordinasi dengan ambulans menjadi sangat efisien. Sistem triase otomatis sangat membantu.",
+      service: "Command Center Integration",
+      role: "Kepala Unit Gawat Darurat",
+      avatar: "SW"
+    },
+    {
+      name: "Budi Santoso",
+      location: "Ambulans Sehat Selalu - Jakarta",
+      rating: 5,
+      text: "Sebagai driver ambulans, Ambulance App sangat memudahkan navigasi dan komunikasi dengan command center. Data pra-rumah sakit yang dikirim otomatis membuat kami lebih siap dalam menangani pasien.",
+      service: "Ambulance App Usage",
+      role: "Driver Ambulans",
       avatar: "BS"
     },
     {
-      name: "Sari Indrawati",
-      location: "Surabaya",
+      name: "Ibu Maya Sari",
+      location: "Warga Jakarta Selatan",
       rating: 5,
-      text: "Ketika mobil mogok di jalan, PSC Harjo datang dengan sangat cepat. Layanan 24/7 mereka benar-benar penyelamat! Teknisi berpengalaman dan sparepart original.",
-      service: "Layanan Darurat",
-      vehicle: "Honda Jazz",
-      avatar: "SI"
-    },
-    {
-      name: "Ahmad Rizki",
-      location: "Bandung",
-      rating: 5,
-      text: "Sudah 5 tahun jadi langganan PSC Harjo. Kualitas servis konsisten dan harga sangat terjangkau. Mereka selalu memberikan solusi terbaik untuk kendaraan saya.",
-      service: "Overhaul Mesin",
-      vehicle: "Mitsubishi Pajero",
-      avatar: "AR"
-    },
-    {
-      name: "Maya Sari",
-      location: "Medan",
-      rating: 5,
-      text: "Booking servis sangat mudah dan praktis. Workshop bersih dan nyaman. Teknisi sangat teliti dalam pengerjaan. Kendaraan kembali seperti baru setelah servis!",
-      service: "Servis Lengkap",
-      vehicle: "Daihatsu Xenia",
+      text: "Ketika ayah saya membutuhkan emergency medical service, User App sangat mudah digunakan. Tombol darurat bekerja sempurna dan ambulans datang dengan sangat cepat. Terima kasih EMR System!",
+      service: "Emergency Response",
+      role: "User Patient",
       avatar: "MS"
     },
     {
-      name: "Rudi Hermawan",
-      location: "Makassar",
+      name: "Dr. Ahmad Rizki",
+      location: "RS Pusat Kanker - Surabaya",
       rating: 5,
-      text: "Ganti oli dan tune-up di PSC Harjo hasilnya luar biasa. Performa motor jadi lebih responsif dan irit bensin. Pelayanan ramah dan profesional.",
-      service: "Ganti Oli & Tune-up",
-      vehicle: "Yamaha NMAX",
-      avatar: "RH"
+      text: "Integrasi data real-time dari field ke rumah sakit sangat membantu kami menyiapkan tim medis sebelum pasien tiba. Sistem CB2 dengan AI triase akurat mengklasifikasikan tingkat kegentingan.",
+      service: "Hospital Integration",
+      role: "Dokter Spesialis",
+      avatar: "AR"
     },
     {
-      name: "Dewi Lestari",
-      location: "Palembang",
+      name: "Nurul Huda",
+      location: "Call Center 119 - Surabaya",
       rating: 5,
-      text: "Servis AC mobil sangat memuaskan. AC kembali dingin maksimal dan harganya sangat reasonable. Teknisi menjelaskan kerusakan dengan jujur dan transparan.",
-      service: "Servis AC",
-      vehicle: "Honda CR-V",
-      avatar: "DL"
+      text: "Dashboard web sangat user-friendly dan semua data emergency tersaji real-time. Komunikasi antara call center, ambulans, dan rumah sakit berjalan lancar. Sistem terintegrasi penuh!",
+      service: "Command Center Dashboard",
+      role: "Operator Call Center",
+      avatar: "NH"
+    },
+    {
+      name: "Dra. Rina Marlina",
+      location: "RSUD Kota Bandung",
+      rating: 5,
+      text: "Implementasi CB1 di wilayah suburban sangat efektif dan efisien biaya. Meskipun fitur sederhana, response time tetap cepat dan koordinasi emergency berjalan optimal.",
+      service: "CB1 Implementation",
+      role: "Kepala Instalasi Gawat Darurat",
+      avatar: "RM"
     }
   ]
 
@@ -83,11 +83,11 @@ const TestimonialsSection = () => {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-cyan-50 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-red-50 via-white to-pink-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23dc2626' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}></div>
       </div>
 
@@ -101,24 +101,24 @@ const TestimonialsSection = () => {
           viewport={{ once: true }}
         >
           <motion.div
-            className="inline-flex items-center space-x-2 bg-cyan-100 text-cyan-700 rounded-full px-6 py-2 mb-6"
+            className="inline-flex items-center space-x-2 bg-red-100 text-red-700 rounded-full px-6 py-2 mb-6"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <Star className="w-4 h-4" />
-            <span className="text-sm font-semibold">Testimoni Pelanggan</span>
+            <Heart className="w-4 h-4" />
+            <span className="text-sm font-semibold">User Experience</span>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Dipercaya Ribuan
-            <span className="text-blue-600"> Pelanggan</span>
+            Dipercaya Seluruh
+            <span className="text-red-600"> Stakeholder</span>
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Dengarkan pengalaman mereka yang telah mempercayakan kendaraannya kepada PSC Harjo. 
-            Setiap testimoni adalah bukti komitmen kami untuk memberikan pelayanan terbaik
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            EMR System telah digunakan oleh rumah sakit, paramedis, dan masyarakat di seluruh Indonesia. 
+            Dengarkan pengalaman mereka dalam menggunakan sistem emergency medical response terintegrasi
           </p>
         </motion.div>
 
@@ -139,7 +139,7 @@ const TestimonialsSection = () => {
             >
               <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full relative">
                 {/* Quote Icon */}
-                <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                <div className="absolute -top-4 -left-4 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
                   <Quote className="w-4 h-4 text-white" />
                 </div>
 
@@ -156,17 +156,17 @@ const TestimonialsSection = () => {
                 </p>
 
                 {/* Service Info */}
-                <div className="bg-blue-50 rounded-lg p-3 mb-4">
+                <div className="bg-red-50 rounded-lg p-3 mb-4">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-blue-700 font-medium">{testimonial.service}</span>
-                    <span className="text-blue-600">{testimonial.vehicle}</span>
+                    <span className="text-red-700 font-medium">{testimonial.service}</span>
+                    <span className="text-red-600">{testimonial.role}</span>
                   </div>
                 </div>
 
                 {/* User Info */}
                 <div className="flex items-center space-x-3">
                   {/* Avatar */}
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold">
                     {testimonial.avatar}
                   </div>
 
@@ -181,13 +181,13 @@ const TestimonialsSection = () => {
                 </div>
 
                 {/* Hover Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Trust Indicators */}
+        {/* Stakeholder Coverage */}
         <motion.div
           className="mt-16 bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
           initial={{ opacity: 0, y: 30 }}
@@ -197,20 +197,20 @@ const TestimonialsSection = () => {
         >
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-800 mb-2">
-              Dipercaya di Seluruh Indonesia
+              Coverage Nationwide
             </h3>
             <p className="text-gray-600">
-              Ribuan pelanggan di berbagai kota mempercayakan kendaraannya kepada PSC Harjo
+              EMR System telah diimplementasikan di berbagai institusi medis di seluruh Indonesia
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { city: "Jakarta", customers: "15,000+", icon: <Car className="w-3 h-3" /> },
-              { city: "Surabaya", customers: "8,500+", icon: <Wrench className="w-3 h-3" /> },
-              { city: "Bandung", customers: "6,200+", icon: <Car className="w-3 h-3" /> },
-              { city: "Medan", customers: "4,800+", icon: <CheckCircle className="w-3 h-3" /> }
-            ].map((city, index) => (
+              { type: "Rumah Sakit", count: "500+", icon: <Heart className="w-3 h-3" /> },
+              { type: "Ambulans", count: "1,200+", icon: <Activity className="w-3 h-3" /> },
+              { type: "User Active", count: "50,000+", icon: <Users className="w-3 h-3" /> },
+              { type: "Emergency Response", count: "99.9%", icon: <CheckCircle className="w-3 h-3" /> }
+            ].map((item, index) => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -219,11 +219,11 @@ const TestimonialsSection = () => {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <div className="flex justify-center mb-2 text-blue-500">
-                  {city.icon}
+                <div className="flex justify-center mb-2 text-red-500">
+                  {item.icon}
                 </div>
-                <div className="text-lg font-bold text-gray-800">{city.customers}</div>
-                <div className="text-sm text-gray-600">Pelanggan di {city.city}</div>
+                <div className="text-lg font-bold text-gray-800">{item.count}</div>
+                <div className="text-sm text-gray-600">{item.type}</div>
               </motion.div>
             ))}
           </div>
