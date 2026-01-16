@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-red-50 via-white to-pink-50 relative overflow-hidden">
+    <section className="py-12 sm:py-20 bg-gradient-to-br from-red-50 via-white to-pink-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -94,29 +94,29 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
           <motion.div
-            className="inline-flex items-center space-x-2 bg-red-100 text-red-700 rounded-full px-6 py-2 mb-6"
+            className="inline-flex items-center space-x-2 bg-red-100 text-red-700 rounded-full px-4 sm:px-6 py-2 mb-4 sm:mb-6"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <Heart className="w-4 h-4" />
-            <span className="text-sm font-semibold">User Experience</span>
+            <Heart className="w-3 h-3 sm:w-4 sm:h-4" />
+            <span className="text-xs sm:text-sm font-semibold">User Experience</span>
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 sm:mb-6 px-4">
             Dipercaya Seluruh
             <span className="text-red-600"> Stakeholder</span>
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
             EMR System telah digunakan oleh rumah sakit, paramedis, dan masyarakat di seluruh Indonesia. 
             Dengarkan pengalaman mereka dalam menggunakan sistem emergency medical response terintegrasi
           </p>
@@ -124,7 +124,7 @@ const TestimonialsSection = () => {
 
         {/* Testimonials Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -137,27 +137,27 @@ const TestimonialsSection = () => {
               variants={cardVariants}
               whileHover={{ y: -5 }}
             >
-              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full relative">
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full relative">
                 {/* Quote Icon */}
-                <div className="absolute -top-4 -left-4 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                  <Quote className="w-4 h-4 text-white" />
+                <div className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 w-6 h-6 sm:w-8 sm:h-8 bg-red-500 rounded-full flex items-center justify-center">
+                  <Quote className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                 </div>
 
                 {/* Rating */}
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
 
                 {/* Testimonial Text */}
-                <p className="text-gray-700 leading-relaxed mb-6 italic">
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 sm:mb-6 italic">
                   "{testimonial.text}"
                 </p>
 
                 {/* Service Info */}
                 <div className="bg-red-50 rounded-lg p-3 mb-4">
-                  <div className="flex items-center justify-between text-sm">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs sm:text-sm space-y-1 sm:space-y-0">
                     <span className="text-red-700 font-medium">{testimonial.service}</span>
                     <span className="text-red-600">{testimonial.role}</span>
                   </div>
@@ -166,14 +166,14 @@ const TestimonialsSection = () => {
                 {/* User Info */}
                 <div className="flex items-center space-x-3">
                   {/* Avatar */}
-                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
                     {testimonial.avatar}
                   </div>
 
                   {/* User Details */}
                   <div>
-                    <div className="font-semibold text-gray-800">{testimonial.name}</div>
-                    <div className="flex items-center space-x-1 text-gray-500 text-sm">
+                    <div className="font-semibold text-gray-800 text-sm sm:text-base">{testimonial.name}</div>
+                    <div className="flex items-center space-x-1 text-gray-500 text-xs sm:text-sm">
                       <MapPin className="w-3 h-3" />
                       <span>{testimonial.location}</span>
                     </div>
@@ -189,27 +189,27 @@ const TestimonialsSection = () => {
 
         {/* Stakeholder Coverage */}
         <motion.div
-          className="mt-16 bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+          className="mt-12 sm:mt-16 bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-2">
+          <div className="text-center mb-6 sm:mb-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">
               Coverage Nationwide
             </h3>
-            <p className="text-gray-600">
+            <p className="text-sm sm:text-base text-gray-600">
               EMR System telah diimplementasikan di berbagai institusi medis di seluruh Indonesia
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {[
-              { type: "Rumah Sakit", count: "500+", icon: <Heart className="w-3 h-3" /> },
-              { type: "Ambulans", count: "1,200+", icon: <Activity className="w-3 h-3" /> },
-              { type: "User Active", count: "50,000+", icon: <Users className="w-3 h-3" /> },
-              { type: "Emergency Response", count: "99.9%", icon: <CheckCircle className="w-3 h-3" /> }
+              { type: "Rumah Sakit", count: "500+", icon: <Heart className="w-4 h-4 sm:w-5 sm:h-5" /> },
+              { type: "Ambulans", count: "1,200+", icon: <Activity className="w-4 h-4 sm:w-5 sm:h-5" /> },
+              { type: "User Active", count: "50,000+", icon: <Users className="w-4 h-4 sm:w-5 sm:h-5" /> },
+              { type: "Emergency Response", count: "99.9%", icon: <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5" /> }
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -222,8 +222,8 @@ const TestimonialsSection = () => {
                 <div className="flex justify-center mb-2 text-red-500">
                   {item.icon}
                 </div>
-                <div className="text-lg font-bold text-gray-800">{item.count}</div>
-                <div className="text-sm text-gray-600">{item.type}</div>
+                <div className="text-lg sm:text-xl font-bold text-gray-800">{item.count}</div>
+                <div className="text-xs sm:text-sm text-gray-600">{item.type}</div>
               </motion.div>
             ))}
           </div>
