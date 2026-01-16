@@ -80,8 +80,8 @@ const Footer = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Main Footer Content */}
-        <div className="py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="py-12 sm:py-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
             <motion.div
               className="lg:col-span-1"
@@ -90,30 +90,30 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                  <Heart className="w-5 h-5 text-white" />
+              <div className="flex items-center space-x-2 mb-4 sm:mb-6">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-red-500 rounded-full flex items-center justify-center">
+                  <Heart className="w-3 h-3 sm:w-5 sm:h-5 text-white" />
                 </div>
-                <h3 className="text-xl font-bold">EMR System</h3>
+                <h3 className="text-lg sm:text-xl font-bold">EMR System</h3>
               </div>
               
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                 Emergency Medical Response System adalah solusi terintegrasi untuk emergency medical response 
                 dengan tiga komponen utama: User App, Ambulance App, dan Command Center Dashboard.
               </p>
 
               {/* Certifications */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-2 text-sm text-gray-400">
-                  <Shield className="w-4 h-4 text-red-400" />
+              <div className="space-y-2 sm:space-y-3">
+                <div className="flex items-center space-x-2 text-xs sm:text-sm text-gray-400">
+                  <Shield className="w-3 h-3 sm:w-4 sm:h-4 text-red-400" />
                   <span>Sistem Terpercaya</span>
                 </div>
-                <div className="flex items-center space-x-2 text-sm text-gray-400">
-                  <Activity className="w-4 h-4 text-blue-400" />
+                <div className="flex items-center space-x-2 text-xs sm:text-sm text-gray-400">
+                  <Activity className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400" />
                   <span>Response &lt; 5 Menit</span>
                 </div>
-                <div className="flex items-center space-x-2 text-sm text-gray-400">
-                  <Database className="w-4 h-4 text-green-400" />
+                <div className="flex items-center space-x-2 text-xs sm:text-sm text-gray-400">
+                  <Database className="w-3 h-3 sm:w-4 sm:h-4 text-green-400" />
                   <span>Real-time Integration</span>
                 </div>
               </div>
@@ -189,138 +189,69 @@ const Footer = () => {
               </div>
 
               {/* Address */}
-              <div className="bg-gray-800 rounded-lg p-4 mb-6">
+              <div className="bg-gray-800 rounded-lg p-3 sm:p-4 mb-4 sm:mb-6">
                 <div className="flex items-center space-x-2 mb-2">
-                  <MapPin className="w-4 h-4 text-green-400" />
-                  <span className="text-sm font-semibold">Head Office</span>
+                  <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-green-400" />
+                  <span className="text-xs sm:text-sm font-semibold">Head Office</span>
                 </div>
-                <div className="text-sm text-gray-300">
+                <div className="text-xs sm:text-sm text-gray-300">
                   Jl. Emergency Medical No. 119
                   <br />
                   Jakarta Pusat, 10110
+                  <br />
+                  Indonesia
                 </div>
               </div>
 
-              {/* Operating Hours */}
-              <div className="bg-gray-800 rounded-lg p-4 mb-6">
-                <div className="flex items-center space-x-2 mb-2">
-                  <Clock className="w-4 h-4 text-yellow-400" />
-                  <span className="text-sm font-semibold">System Uptime</span>
-                </div>
-                <div className="text-sm text-gray-300">
-                  <div>Monitoring: 24/7</div>
-                  <div>Support: 24/7</div>
-                </div>
+              {/* Social Links */}
+              <div className="flex space-x-3 sm:space-x-4">
+                {socialLinks.map((social, index) => (
+                  <motion.a
+                    key={index}
+                    href={social.href}
+                    className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition-colors duration-200"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    aria-label={social.label}
+                  >
+                    {social.icon}
+                  </motion.a>
+                ))}
               </div>
-
-              {/* Demo CTA */}
-              <motion.button
-                className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition-colors duration-200"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Heart className="w-4 h-4" />
-                <span>Request Demo</span>
-              </motion.button>
             </motion.div>
           </div>
         </div>
 
-        {/* Implementation Concepts */}
-        <motion.div
-          className="border-t border-gray-800 py-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-4">
-              Konsep Implementasi EMR System
-            </h3>
-            <p className="text-gray-300 mb-8 max-w-3xl mx-auto">
-              Tiga konsep implementasi untuk memenuhi berbagai kebutuhan emergency medical response
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-800 rounded-lg p-6 text-center">
-              <h4 className="text-lg font-bold text-white mb-2">CB1 - Fitur Sederhana</h4>
-              <p className="text-gray-300 text-sm">Sistem emergency response dasar dengan fitur inti dan dispatch manual</p>
-            </div>
-            <div className="bg-gray-800 rounded-lg p-6 text-center">
-              <h4 className="text-lg font-bold text-white mb-2">CB2 - Terintegrasi Penuh</h4>
-              <p className="text-gray-300 text-sm">Sistem komprehensif dengan AI triase dan analytics prediktif</p>
-            </div>
-            <div className="bg-gray-800 rounded-lg p-6 text-center">
-              <h4 className="text-lg font-bold text-white mb-2">CB3 - Berbasis Lokasi</h4>
-              <p className="text-gray-300 text-sm">Sistem berbasis lokasi geografis dengan akses terbatas</p>
-            </div>
-          </div>
-        </motion.div>
-
         {/* Bottom Footer */}
-        <div className="border-t border-gray-800 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+        <div className="border-t border-gray-800 py-6 sm:py-8">
+          <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
             {/* Copyright */}
             <motion.div
-              className="text-gray-400 text-sm"
+              className="text-gray-400 text-xs sm:text-sm text-center sm:text-left"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              © 2024 EMR System. All rights reserved. Emergency Medical Response Terintegrasi.
+              © 2024 EMR System. Semua hak dilindungi. 
+              <br className="sm:hidden" />
+              <span className="sm:ml-2">Emergency Medical Response Terintegrasi</span>
             </motion.div>
 
-            {/* Social Links */}
+            {/* Legal Links */}
             <motion.div
-              className="flex items-center space-x-4"
+              className="flex items-center space-x-4 sm:space-x-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <span className="text-gray-400 text-sm mr-2">Follow us:</span>
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.href}
-                  className="text-gray-400 hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-gray-800"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  aria-label={social.label}
-                >
-                  {social.icon}
-                </motion.a>
-              ))}
+              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200 text-xs sm:text-sm">Kebijakan Privasi</a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200 text-xs sm:text-sm">Syarat & Ketentuan</a>
             </motion.div>
           </div>
         </div>
       </div>
-
-      {/* Floating Emergency Button */}
-      <motion.button
-        className="fixed bottom-6 right-6 bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-full shadow-2xl z-50 flex items-center space-x-2"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        animate={{
-          boxShadow: [
-            "0 0 0 0 rgba(239, 68, 68, 0.7)",
-            "0 0 0 20px rgba(239, 68, 68, 0)",
-            "0 0 0 0 rgba(239, 68, 68, 0)"
-          ]
-        }}
-        transition={{
-          boxShadow: {
-            duration: 2,
-            repeat: Infinity
-          }
-        }}
-      >
-        <Heart className="w-5 h-5" />
-        <span className="hidden sm:inline">Emergency Call</span>
-      </motion.button>
     </footer>
   )
 }

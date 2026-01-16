@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { 
   User, 
-  Ambulance, 
+  Truck, 
   Monitor, 
   MapPin, 
   Smartphone,
@@ -11,7 +11,7 @@ import {
   Radio,
   Brain,
   TrendingUp,
-  Hospital,
+  Building,
   DollarSign,
   Zap,
   Shield,
@@ -201,7 +201,7 @@ const ConceptAnimationSection = () => {
               repeatType: "reverse"
             }}
           >
-            <Ambulance className="w-10 h-10 text-white" />
+            <Truck className="w-10 h-10 text-white" />
             {/* Siren Light */}
             <motion.div
               className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"
@@ -413,47 +413,47 @@ const ConceptAnimationSection = () => {
   )
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section className="py-12 sm:py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-20 w-64 h-64 bg-red-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-        <div className="absolute top-40 right-20 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-20 left-1/2 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+        <div className="absolute top-20 left-20 w-32 sm:w-64 h-32 sm:h-64 bg-red-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+        <div className="absolute top-40 right-20 w-32 sm:w-64 h-32 sm:h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-20 left-1/2 w-32 sm:w-64 h-32 sm:h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
           <motion.div
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-100 to-purple-100 text-red-700 rounded-full px-6 py-2 mb-6"
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-100 to-purple-100 text-red-700 rounded-full px-4 sm:px-6 py-2 mb-4 sm:mb-6"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <Smartphone className="w-4 h-4" />
-            <span className="text-sm font-semibold">Konsep yang Diminati</span>
+            <Smartphone className="w-3 h-3 sm:w-4 sm:h-4" />
+            <span className="text-xs sm:text-sm font-semibold">Konsep yang Diminati</span>
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 sm:mb-6 px-4">
             Pilih
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-purple-600"> Konsep Sistem Anda</span>
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
             Tiga konsep implementasi sistem emergency response yang dapat disesuaikan dengan kebutuhan dan budget Anda
           </p>
         </motion.div>
 
         {/* Concept Selector */}
         <motion.div
-          className="flex flex-wrap justify-center gap-4 mb-16"
+          className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-16 px-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -462,7 +462,7 @@ const ConceptAnimationSection = () => {
           {Object.keys(concepts).map((conceptKey) => (
             <motion.button
               key={conceptKey}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 text-sm sm:text-base ${
                 selectedConcept === conceptKey
                   ? `bg-gradient-to-r ${concepts[conceptKey].gradient} text-white shadow-lg`
                   : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-gray-300'
@@ -595,7 +595,7 @@ const ConceptAnimationSection = () => {
                     <span className="text-sm text-gray-600 text-center">Analytics</span>
                   </motion.div>
                   <motion.div variants={itemVariants} className="flex flex-col items-center p-4 bg-white rounded-xl shadow-md">
-                    <Hospital className="w-8 h-8 text-blue-600 mb-2" />
+                    <Building className="w-8 h-8 text-blue-600 mb-2" />
                     <span className="text-sm text-gray-600 text-center">Hospital Integration</span>
                   </motion.div>
                   <motion.div variants={itemVariants} className="flex flex-col items-center p-4 bg-white rounded-xl shadow-md">

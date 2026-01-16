@@ -76,40 +76,40 @@ const HowItWorksSection = () => {
   ]
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-12 sm:py-20 bg-white relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-20 right-20 w-72 h-72 bg-red-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div className="absolute top-40 left-20 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-20 right-1/3 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-20 right-20 w-32 sm:w-72 h-32 sm:h-72 bg-red-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div className="absolute top-40 left-20 w-32 sm:w-72 h-32 sm:h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-20 right-1/3 w-32 sm:w-72 h-32 sm:h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
           <motion.div
-            className="inline-flex items-center space-x-2 bg-red-100 text-red-700 rounded-full px-6 py-2 mb-6"
+            className="inline-flex items-center space-x-2 bg-red-100 text-red-700 rounded-full px-4 sm:px-6 py-2 mb-4 sm:mb-6"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <Clock className="w-4 h-4" />
-            <span className="text-sm font-semibold">Emergency Response Workflow</span>
+            <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
+            <span className="text-xs sm:text-sm font-semibold">Emergency Response Workflow</span>
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 sm:mb-6 px-4">
             Cara Kerja
             <span className="text-red-600"> EMR System</span>
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
             Sistem emergency medical response terintegrasi dengan workflow yang dirancang 
             untuk memberikan respons tercepat dan paling efektif dalam situasi emergency medis
           </p>
@@ -226,58 +226,58 @@ const HowItWorksSection = () => {
 
         {/* System Concepts */}
         <motion.div
-          className="mb-16"
+          className="mb-12 sm:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4 px-4">
               Tiga Konsep Implementasi
             </h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Pilih konsep yang sesuai dengan kebutuhan, budget, dan skala operasional emergency medical response Anda
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {concepts.map((concept, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 h-full"
+                className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 h-full"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
               >
                 {/* Icon */}
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${concept.color} text-white mb-6`}>
+                <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-r ${concept.color} text-white mb-4 sm:mb-6`}>
                   {concept.icon}
                 </div>
 
                 {/* Content */}
-                <h4 className="text-xl font-bold text-gray-800 mb-3">
+                <h4 className="text-lg sm:text-xl font-bold text-gray-800 mb-3">
                   {concept.title}
                 </h4>
                 
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">
                   {concept.description}
                 </p>
 
                 {/* Features */}
                 <ul className="space-y-2 mb-6">
                   {concept.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-start space-x-2 text-xs sm:text-sm text-gray-600">
+                      <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 flex-shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 {/* Ideal for */}
-                <div className="bg-gray-50 rounded-lg p-4 mt-auto">
-                  <p className="text-sm text-gray-600 font-medium">
+                <div className="bg-gray-50 rounded-lg p-3 sm:p-4 mt-auto">
+                  <p className="text-xs sm:text-sm text-gray-600 font-medium">
                     <span className="text-gray-800">Cocok untuk:</span> {concept.ideal}
                   </p>
                 </div>
@@ -288,27 +288,27 @@ const HowItWorksSection = () => {
 
         {/* Performance Stats */}
         <motion.div
-          className="bg-gradient-to-r from-red-600 to-pink-600 rounded-3xl p-8 md:p-12 text-white"
+          className="bg-gradient-to-r from-red-600 to-pink-600 rounded-3xl p-6 sm:p-8 md:p-12 text-white"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="text-center mb-8">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="text-center mb-6 sm:mb-8">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
               Kinerja Emergency Response System
             </h3>
-            <p className="text-white/90 text-lg">
+            <p className="text-white/90 text-base sm:text-lg px-4">
               Target kinerja EMR System untuk memberikan layanan emergency medis terbaik
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {[
-              { number: "< 5", label: "Menit Response Time", icon: <Clock className="w-6 h-6" /> },
-              { number: "99.9%", label: "System Uptime", icon: <CheckCircle className="w-6 h-6" /> },
-              { number: "24/7", label: "Monitoring", icon: <Activity className="w-6 h-6" /> },
-              { number: "100%", label: "Real-time Data", icon: <Database className="w-6 h-6" /> }
+              { number: "< 5", label: "Menit Response Time", icon: <Clock className="w-5 h-5 sm:w-6 sm:h-6" /> },
+              { number: "99.9%", label: "System Uptime", icon: <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6" /> },
+              { number: "24/7", label: "Monitoring", icon: <Activity className="w-5 h-5 sm:w-6 sm:h-6" /> },
+              { number: "100%", label: "Real-time Data", icon: <Database className="w-5 h-5 sm:w-6 sm:h-6" /> }
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -318,11 +318,11 @@ const HowItWorksSection = () => {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <div className="flex justify-center mb-3 text-red-200">
+                <div className="flex justify-center mb-2 sm:mb-3 text-red-200">
                   {stat.icon}
                 </div>
-                <div className="text-3xl md:text-4xl font-bold mb-2">{stat.number}</div>
-                <div className="text-white/80 text-sm">{stat.label}</div>
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2">{stat.number}</div>
+                <div className="text-white/80 text-xs sm:text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </div>

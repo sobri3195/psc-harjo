@@ -49,30 +49,30 @@ const HeroSection = ({ onServiceClick }) => {
         >
           {/* Badge */}
           <motion.div
-            className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-8"
+            className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-6 py-2 mb-6 sm:mb-8"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            <Heart className="w-4 h-4" />
-            <span className="text-sm font-medium">Sistem Emergency Medical Response Terintegrasi</span>
+            <Heart className="w-3 h-3 sm:w-4 sm:h-4" />
+            <span className="text-xs sm:text-sm font-medium">Sistem Emergency Medical Response Terintegrasi</span>
           </motion.div>
 
           {/* Main Headline */}
           <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+            className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 leading-tight px-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
             EMR<span className="text-cyan-300"> System</span>
             <br />
-            <span className="text-3xl md:text-5xl">Emergency Medical Response</span>
+            <span className="text-xl sm:text-3xl md:text-5xl">Emergency Medical Response</span>
           </motion.h1>
 
           {/* Subtitle */}
           <motion.p
-            className="text-xl md:text-2xl mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
@@ -83,69 +83,69 @@ const HeroSection = ({ onServiceClick }) => {
 
           {/* System Components Preview */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12 max-w-4xl mx-auto px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <Smartphone className="w-8 h-8 text-cyan-300 mx-auto mb-3" />
-              <h3 className="text-lg font-semibold mb-2">User App</h3>
-              <p className="text-sm text-white/80">Tombol darurat & pelaporan kejadian untuk pengguna</p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/20">
+              <Smartphone className="w-6 h-6 sm:w-8 sm:h-8 text-cyan-300 mx-auto mb-2 sm:mb-3" />
+              <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2">User App</h3>
+              <p className="text-xs sm:text-sm text-white/80">Tombol darurat & pelaporan kejadian untuk pengguna</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <Activity className="w-8 h-8 text-cyan-300 mx-auto mb-3" />
-              <h3 className="text-lg font-semibold mb-2">Ambulance App</h3>
-              <p className="text-sm text-white/80">Dispatch, navigasi & data pra-rumah sakit</p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/20">
+              <Activity className="w-6 h-6 sm:w-8 sm:h-8 text-cyan-300 mx-auto mb-2 sm:mb-3" />
+              <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2">Ambulance App</h3>
+              <p className="text-xs sm:text-sm text-white/80">Dispatch, navigasi & data pra-rumah sakit</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <Users className="w-8 h-8 text-cyan-300 mx-auto mb-3" />
-              <h3 className="text-lg font-semibold mb-2">Web Dashboard</h3>
-              <p className="text-sm text-white/80">Command center & call center real-time</p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-white/20 sm:col-span-2 lg:col-span-1 mx-auto sm:mx-0 max-w-sm sm:max-w-none">
+              <Users className="w-6 h-6 sm:w-8 sm:h-8 text-cyan-300 mx-auto mb-2 sm:mb-3" />
+              <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2">Web Dashboard</h3>
+              <p className="text-xs sm:text-sm text-white/80">Command center & call center real-time</p>
             </div>
           </motion.div>
 
           {/* Stats Row */}
           <motion.div
-            className="grid grid-cols-3 gap-8 mb-12 max-w-2xl mx-auto"
+            className="grid grid-cols-3 gap-4 sm:gap-8 mb-8 sm:mb-12 max-w-2xl mx-auto px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-300 mb-2">&lt;5</div>
-              <div className="text-sm text-white/80">Menit Response</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-cyan-300 mb-1 sm:mb-2">&lt;5</div>
+              <div className="text-xs sm:text-sm text-white/80">Menit Response</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-300 mb-2">24/7</div>
-              <div className="text-sm text-white/80">Monitoring</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-cyan-300 mb-1 sm:mb-2">24/7</div>
+              <div className="text-xs sm:text-sm text-white/80">Monitoring</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-300 mb-2">100%</div>
-              <div className="text-sm text-white/80">Real-time</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-cyan-300 mb-1 sm:mb-2">100%</div>
+              <div className="text-xs sm:text-sm text-white/80">Real-time</div>
             </div>
           </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
           >
             <motion.button
-              className="bg-cyan-400 hover:bg-cyan-300 text-gray-900 font-bold py-4 px-8 rounded-full text-lg flex items-center space-x-2 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-200"
+              className="bg-cyan-400 hover:bg-cyan-300 text-gray-900 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg flex items-center space-x-2 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-200 w-full sm:w-auto max-w-sm"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={onServiceClick}
             >
-              <Heart className="w-5 h-5" />
+              <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
               <span>Demo Sistem</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </motion.button>
 
             <motion.button
-              className="border-2 border-white/30 hover:border-white/60 text-white font-semibold py-4 px-8 rounded-full text-lg backdrop-blur-sm hover:bg-white/10 transform hover:scale-105 transition-all duration-200"
+              className="border-2 border-white/30 hover:border-white/60 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg backdrop-blur-sm hover:bg-white/10 transform hover:scale-105 transition-all duration-200 w-full sm:w-auto max-w-sm"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -155,21 +155,21 @@ const HeroSection = ({ onServiceClick }) => {
 
           {/* Trust indicators */}
           <motion.div
-            className="mt-16 flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-white/70 text-sm"
+            className="mt-12 sm:mt-16 flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-6 lg:space-x-8 text-white/70 text-xs sm:text-sm px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.8 }}
           >
             <div className="flex items-center space-x-2">
-              <Shield className="w-4 h-4" />
+              <Shield className="w-3 h-3 sm:w-4 sm:h-4" />
               <span>Sistem Terpercaya</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Clock className="w-4 h-4" />
+              <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
               <span>Response Cepat</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Zap className="w-4 h-4" />
+              <Zap className="w-3 h-3 sm:w-4 sm:h-4" />
               <span>Terintegrasi Penuh</span>
             </div>
           </motion.div>

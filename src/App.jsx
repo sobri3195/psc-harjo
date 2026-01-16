@@ -7,6 +7,7 @@ import HowItWorksSection from './components/HowItWorksSection'
 import TestimonialsSection from './components/TestimonialsSection'
 import Footer from './components/Footer'
 import ServiceModal from './components/ServiceModal'
+import FloatingActionButton from './components/FloatingActionButton'
 
 function App() {
   const [showServiceModal, setShowServiceModal] = useState(false)
@@ -46,6 +47,9 @@ function App() {
           />
         )}
       </AnimatePresence>
+
+      {/* Floating Action Buttons */}
+      <FloatingActionButton onServiceClick={() => setShowServiceModal(true)} />
     </div>
   )
 }
