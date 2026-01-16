@@ -25,7 +25,7 @@ const ConceptAnimationSection = () => {
   const concepts = {
     CB1: {
       title: 'CB1 - Fitur Sederhana',
-      description: 'Sistem emergency response dasar dengan fitur inti: tombol darurat, tracking lokasi, dan dispatch manual',
+      description: 'Sistem emergency response dasar dengan dispatch manual',
       features: [
         'Tombol darurat sederhana',
         'GPS tracking basic',
@@ -40,8 +40,8 @@ const ConceptAnimationSection = () => {
       dashboardFeatures: ['Dispatch Manual', 'Tracking Lokasi']
     },
     CB2: {
-      title: 'CB2 - Fitur Kompleks Terintegrasi Penuh',
-      description: 'Sistem emergency response komprehensif dengan semua fitur advanced: AI triase, prediktif analytics, dan integrasi rumah sakit penuh',
+      title: 'CB2 - Terintegrasi Penuh',
+      description: 'Sistem komprehensif dengan AI triase dan analytics',
       features: [
         'AI-powered triase system',
         'Prediktif analytics',
@@ -57,8 +57,8 @@ const ConceptAnimationSection = () => {
       dashboardFeatures: ['AI Analytics', 'Prediktif System', 'Full Monitoring', 'Hospital Network']
     },
     CB3: {
-      title: 'CB3 - Fitur Terbatas Berbasis Lokasi',
-      description: 'Sistem emergency response berbasis lokasi geografis dengan akses terbatas untuk efisiensi operasional dan biaya',
+      title: 'CB3 - Berbasis Lokasi',
+      description: 'Sistem berbasis lokasi geografis dengan akses terbatas',
       features: [
         'Geo-fencing based access',
         'Location-based dispatch',
@@ -438,16 +438,16 @@ const ConceptAnimationSection = () => {
             viewport={{ once: true }}
           >
             <Smartphone className="w-4 h-4" />
-            <span className="text-sm font-semibold">Animasi Sistem Terintegrasi</span>
+            <span className="text-sm font-semibold">Konsep yang Diminati</span>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Visualisasi
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-purple-600"> Sistem Emergency Response</span>
+            Pilih
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-purple-600"> Konsep Sistem Anda</span>
           </h2>
           
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Lihat bagaimana User App, Ambulance System, dan Dashboard Maps bekerja terintegrasi dalam tiga konsep implementasi berbeda
+            Tiga konsep implementasi sistem emergency response yang dapat disesuaikan dengan kebutuhan dan budget Anda
           </p>
         </motion.div>
 
