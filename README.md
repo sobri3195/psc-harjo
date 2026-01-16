@@ -1,162 +1,231 @@
-# Emergency Medical Command & Response System - Landing Page
+# 🚑 911 Emergency Dashboard
 
-Landing page modern dan profesional untuk sistem komando medis terintegrasi dengan tiga varian produk yang berbeda.
+Dashboard darurat 911 yang dibuat dengan React dan animasi menarik untuk tracking ambulans dan user dalam situasi emergency.
 
-## Fitur Utama
+## ✨ Fitur Utama
 
-### CB 1 — Simple Core System
-Solusi dasar dengan fokus pada kesederhanaan, kecepatan, dan stabilitas.
+### 🎯 Dashboard 911 Komprehensif
+- **Real-time Monitoring**: Tracking ambulans dan emergency calls secara real-time
+- **Interactive Map**: Peta interaktif dengan animasi bergerak untuk ambulans
+- **Command Center**: Pusat komando untuk dispatch dan monitoring
+- **User Panel**: Interface untuk emergency requests dari pengguna
 
-**Komponen:**
-- Aplikasi User: Tombol darurat satu klik, pengiriman lokasi otomatis, status bantuan
-- Aplikasi Ambulans: Terima dispatch, navigasi, update status misi
-- Dashboard Command Center: Daftar kejadian, status ambulans, peta real-time, dispatch cepat
+### 🚑 Animasi Ambulans
+- **Movement Animation**: Ambulans bergerak dengan animasi smooth
+- **Status Indicators**: Visual status (available, dispatched, en-route, returning)
+- **Route Animation**: Animasi jalur saat ambulans menuju lokasi emergency
+- **Emergency Response**: Animasi khusus saat dispatch dan response
 
-### CB 2 — Advanced & Integrated System
-Platform enterprise-level dengan integrasi klinis lengkap.
+### 👤 User Interface
+- **Emergency Button**: Tombol darurat dengan animasi pulse
+- **Quick Request**: Form emergency request dengan validasi
+- **Location Pin**: Pin lokasi user dengan animasi ping effect
+- **Status Tracking**: Tracking status emergency dari request hingga resolved
 
-**Komponen:**
-- Aplikasi User: Emergency request, klasifikasi kejadian, tracking, edukasi
-- Aplikasi Ambulans: Dispatch otomatis, input vital sign, pre-notification IGD, ETA
-- Command Center & IGD: Call triage, decision support, monitoring multi-ambulans, aktivasi jalur klinis
+### 🎨 Animasi Menarik
+- **Pulse Effects**: Animasi berdenyut untuk emergency states
+- **Smooth Transitions**: Transisi halus antar komponen
+- **Hover Effects**: Interaksi hover yang responsif
+- **Loading States**: Animasi loading yang smooth
 
-### CB 3 — Location-Based Limited System
-Solusi berbasis wilayah dengan kontrol akses terbatas.
+## 🛠️ Teknologi
 
-**Komponen:**
-- Aplikasi User (Location-Based): Aktif di area tertentu, tombol darurat, validasi zona
-- Aplikasi Ambulans: Dispatch dalam zona, navigasi internal, status misi
-- Command Center (Restricted): Monitoring berbasis wilayah, akses role-based, log per zona
+- **React 18** - Framework UI modern
+- **Framer Motion** - Library animasi advanced
+- **Tailwind CSS** - Styling utility-first
+- **Lucide React** - Icon library
+- **Vite** - Build tool cepat
 
-## Teknologi
+## 🚀 Cara Menjalankan
 
-- **HTML5**: Struktur semantik dan aksesibel
-- **CSS3**: Styling modern dengan Flexbox dan Grid
-- **JavaScript (Vanilla)**: Interaktivitas dan animasi tanpa dependensi
+### Prerequisites
+- Node.js 16+ 
+- npm atau yarn
 
-## Struktur File
-
-```
-project/
-├── index.html      # Halaman utama landing page
-├── styles.css      # Styling dan desain responsif
-├── script.js       # JavaScript untuk interaktivitas
-└── README.md       # Dokumentasi proyek
-```
-
-## Fitur Landing Page
-
-### Desain
-- Warna medis profesional (biru, putih, cyan)
-- Layout responsif untuk semua perangkat
-- Animasi smooth dan modern
-- Ikon minimalis dan SVG custom
-
-### Navigasi
-- Navbar sticky dengan efek scroll
-- Mobile menu responsive
-- Smooth scroll ke setiap section
-- Active state indicator
-
-### Interaktivitas
-- Hover effects pada cards dan buttons
-- Ripple effect pada tombol
-- Fade-in animations saat scroll
-- Counter animation untuk statistik
-
-### Sections
-1. **Hero Section**: Headline utama dengan statistik dan preview cards
-2. **CB 1 Section**: Simple Core System dengan features dan components
-3. **CB 2 Section**: Advanced & Integrated System (dark theme)
-4. **CB 3 Section**: Location-Based Limited System
-5. **CTA Section**: Call-to-action dengan multiple buttons
-6. **Footer**: Branding, links, dan copyright
-
-## Penggunaan
-
-### Buka Landing Page
-Simply open `index.html` in a web browser:
+### Instalasi & Menjalankan
 
 ```bash
-# Using a simple HTTP server
-python -m http.server 8000
+# Clone atau copy project
+cd 911-emergency-dashboard
 
-# Or using Node.js
-npx serve .
+# Install dependencies
+npm install
 
-# Or directly open in browser
-open index.html  # macOS
-start index.html # Windows
-xdg-open index.html # Linux
+# Jalankan development server
+npm run dev
+
+# Buka browser ke http://localhost:3000
 ```
 
-### Kustomisasi
+### Build untuk Production
 
-#### Mengubah Warna
-Edit variabel CSS di `styles.css`:
+```bash
+npm run build
+npm run preview
+```
 
+## 📱 Fitur Dashboard
+
+### 🗺️ Ambulance Tracker (Center Panel)
+- **Live Map**: Peta dengan grid dan jalan simulasi
+- **Ambulance Markers**: Marker ambulans dengan status colors
+- **Emergency Pins**: Pin lokasi emergency dengan animasi
+- **Route Animation**: Animasi jalur perjalanan ambulans
+- **Interactive**: Click ambulans untuk detail info
+
+### 👤 User Panel (Left Panel)  
+- **Emergency Button**: Tombol emergency dengan animasi pulse
+- **Quick Select**: Pilih jenis emergency (Heart Attack, Accident, Medical, etc.)
+- **Recent Calls**: History emergency calls terbaru
+- **Form Modal**: Modal form untuk detail emergency
+
+### 🎛️ Command Center (Right Panel)
+- **Active Emergencies**: List emergency yang sedang pending
+- **Fleet Status**: Status semua ambulans dalam fleet
+- **Quick Dispatch**: Interface dispatch ambulans cepat
+- **Real-time Updates**: Update status real-time
+
+### 📊 Statistics Panel (Bottom)
+- **Total Ambulances**: Jumlah total ambulans
+- **Available Units**: Unit yang siap siaga
+- **Pending Calls**: Emergency calls yang menunggu
+- **Response Rate**: Persentase response yang berhasil
+
+## 🎭 Jenis Animasi
+
+### Emergency Animations
+- **Emergency Pulse**: Animasi berdenyut untuk tombol emergency
+- **User Ping**: Animasi ping untuk lokasi user
+- **Status Blinking**: Blinking untuk status active
+
+### Ambulance Animations  
+- **Movement**: Animasi gerakan ambulans di peta
+- **Route Following**: Animasi mengikuti jalur
+- **Status Change**: Transisi status (available → dispatched → en-route)
+
+### UI Animations
+- **Page Transitions**: Transisi antar halaman/modal
+- **Hover Effects**: Efek hover pada buttons dan cards
+- **Loading States**: Animasi loading yang smooth
+- **Micro-interactions**: Animasi detail untuk interaksi kecil
+
+## 🏗️ Struktur Komponen
+
+```
+src/
+├── components/
+│   ├── Dashboard.jsx          # Main dashboard layout
+│   ├── AmbulanceTracker.jsx   # Map & ambulance tracking
+│   ├── UserPanel.jsx          # Emergency requests panel
+│   ├── CommandCenter.jsx      # Command & control panel
+│   └── EmergencyModal.jsx     # Emergency form modal
+├── App.jsx                    # Main app component
+├── main.jsx                   # App entry point
+└── index.css                  # Global styles & animations
+```
+
+## 🎨 Customization
+
+### Mengubah Warna Theme
+Edit di `src/index.css`:
 ```css
 :root {
-    --primary-blue: #0077B6;
-    --primary-blue-light: #00B4D8;
-    --accent-cyan: #CAF0F8;
-    /* ... */
+  --emergency-red: #ef4444;
+  --ambulance-blue: #3b82f6;
+  --available-green: #10b981;
 }
 ```
 
-#### Mengubah Konten
-Edit teks di `index.html` sesuai kebutuhan. Setiap section memiliki class yang jelas:
-- `.hero-title` untuk headline utama
-- `.cb-title` untuk judul setiap CB
-- `.feature-item` untuk fitur-fitur
-- `.component-card` untuk komponen sistem
+### Menambah Jenis Emergency
+Edit di `src/components/EmergencyModal.jsx`:
+```javascript
+const emergencyTypes = [
+  // Existing types...
+  { 
+    id: 'new-type', 
+    icon: NewIcon, 
+    label: 'New Emergency', 
+    color: 'bg-purple-500',
+    priority: 'medium'
+  }
+]
+```
 
-#### Menambahkan Logo
-Ganti SVG di bagian `.logo` di `index.html` dengan logo Anda sendiri.
+### Kustom Animasi
+Tambah di `src/index.css`:
+```css
+@keyframes custom-animation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+```
 
-## Responsiveness
+## 🔧 Fitur Pengembangan
 
-Landing page ini sepenuhnya responsif dan mendukung:
-- Desktop: 1200px+
-- Tablet: 768px - 1024px
-- Mobile: < 768px
-- Small Mobile: < 480px
+### Real-time Simulation
+- Simulasi ambulans bergerak otomatis
+- Random emergency calls generator
+- Status transitions yang realistis
 
-## Browser Support
+### Responsive Design
+- Desktop: 3-column layout
+- Mobile: Single column stacked
+- Tablet: Adaptive grid
 
-- Chrome (terbaru)
-- Firefox (terbaru)
-- Safari (terbaru)
-- Edge (terbaru)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+### Accessibility
+- Keyboard navigation
+- Screen reader support
+- High contrast colors
+- Focus indicators
 
-## Performa
+## 🚨 Demo Scenarios
 
-- Minimal JavaScript (vanilla JS, tidak ada framework)
-- CSS optimized dengan variabel
-- SVG inline untuk ikon
-- Lazy loading support untuk images
-- Smooth animations dengan hardware acceleration
+### Scenario 1: Heart Attack Emergency
+1. Klik "Emergency" button
+2. Pilih "Heart Attack"
+3. Ambulance akan bergerak ke lokasi
+4. Status berubah: Available → Dispatched → En Route
 
-## Aksesibilitas
+### Scenario 2: Multi-Emergency
+1. Buat multiple emergency calls
+2. Lihat bagaimana ambulans didispatch
+3. Monitor response time
 
-- Semantic HTML5
-- ARIA labels
-- Keyboard navigation support
-- Color contrast compliant
-- Mobile-friendly tap targets
+### Scenario 3: Command Center
+1. Buka Command Center panel
+2. Lihat fleet status
+3. Dispatch ambulans manual
+4. Monitor real-time updates
 
-## License
+## 🔮 Roadmap
 
-All rights reserved © 2024 Emergency Medical Command & Response System
+- [ ] Real-time WebSocket integration
+- [ ] GPS location tracking
+- [ ] Voice communication
+- [ ] Hospital integration
+- [ ] Mobile responsive improvements
+- [ ] Push notifications
+- [ ] Historical data analytics
 
-## Dukungan
+## 🤝 Contributing
 
-Untuk demo atau konsultasi sistem, hubungi tim kami melalui:
-- Request Demo
-- Konsultasi Sistem
-- Hubungi Tim
+1. Fork the project
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🆘 Support
+
+Untuk emergency atau bug reports, silakan buat issue di repository ini.
 
 ---
 
-**Bangun sistem respons medis yang sesuai dengan kebutuhan institusi Anda.**
+**Made with ❤️ for Emergency Response Systems**
+
+Dashboard 911 ini menyediakan interface yang user-friendly dan animasi yang menarik untuk membantu operator emergency services dalam menjalankan tugas mereka dengan lebih efisien.
