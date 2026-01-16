@@ -1,15 +1,15 @@
-# 🔧 PSC Harjo - Pusat Servis Cepat
+# 🚑 EMR System - Emergency Medical Response Terintegrasi
 
-Landing page untuk PSC Harjo - Pusat Servis Cepat yang menyediakan layanan servis kendaraan terpercaya dengan teknisi profesional, pengerjaan cepat, dan garansi terjamin.
+Landing page untuk EMR System - sistem emergency medical response terintegrasi yang terdiri dari tiga komponen utama: aplikasi Android untuk pengguna, aplikasi Android untuk ambulans, dan dashboard web sebagai command center untuk monitoring, triase, dan pengendalian operasional secara real-time.
 
 ## ✨ Fitur Utama
 
 ### 🎯 Landing Page Modern
-- **Hero Section**: Header menarik dengan animasi dan CTA untuk booking servis
-- **Features Section**: Menampilkan keunggulan layanan PSC Harjo
-- **How It Works Section**: Alur proses servis yang jelas dan mudah dipahami
-- **Testimonials Section**: Testimoni pelanggan yang puas dengan layanan kami
-- **Footer**: Informasi kontak, layanan, dan sosial media
+- **Hero Section**: Header menarik dengan animasi dan CTA untuk demo sistem
+- **Features Section**: Menampilkan fitur terintegrasi EMR System
+- **How It Works Section**: Workflow emergency response yang jelas
+- **Testimonials Section**: Testimoni dari stakeholder medis
+- **Footer**: Informasi kontak darurat dan sistem komponen
 
 ### 🎨 Animasi Menarik
 - **Smooth Animations**: Transisi halus menggunakan Framer Motion
@@ -40,7 +40,7 @@ Landing page untuk PSC Harjo - Pusat Servis Cepat yang menyediakan layanan servi
 
 ```bash
 # Clone atau copy project
-cd psc-harjo
+cd emr-system
 
 # Install dependencies
 npm install
@@ -58,58 +58,65 @@ npm run build
 npm run preview
 ```
 
-## 📱 Fitur Landing Page
+## 📱 Komponen Sistem
 
-### 🚀 Hero Section
-- **Headline Menarik**: "PSC Harjo - Pusat Servis Cepat"
-- **Subheadline**: Penjelasan singkat tentang layanan
-- **Stats Row**: Menampilkan tahun pengalaman, pelanggan puas, dan layanan 24/7
-- **CTA Buttons**: Tombol "Booking Servis" dan "Lihat Layanan"
-- **Trust Indicators**: Badge garansi resmi, service cepat, teknisi berpengalaman
+### 🚑 Hero Section
+- **Headline Menarik**: "EMR System - Emergency Medical Response"
+- **Subheadline**: Penjelasan sistem terintegrasi
+- **System Components Preview**: User App, Ambulance App, Web Dashboard
+- **Stats Row**: Response time < 5 menit, monitoring 24/7, real-time data
+- **CTA Buttons**: "Demo Sistem" dan "Lihat Konsep"
+- **Trust Indicators**: Sistem terpercaya, response cepat, terintegrasi penuh
 
 ### ⭐ Features Section
-- **6 Fitur Utama**:
-  - Pengerjaan Cepat & Rapi
-  - Sparepart Original
-  - Layanan 24/7
-  - Teknisi Bersertifikat
-  - Semua Jenis Kendaraan
-  - Garansi Servis
-- **CTA Box**: Ajakan untuk menghubungi kami
-- **Hover Effects**: Animasi pada setiap feature card
+- **9 Fitur Utama**:
+  - User App - Tombol Darurat
+  - Ambulance App - Dispatch System
+  - Web Dashboard - Command Center
+  - GPS Tracking Real-time
+  - Communication System
+  - Medical Data Integration
+  - Response Time < 5 Menit
+  - Medical Triage System
+  - Emergency Alert System
+- **System Components Highlight**: Preview tiga komponen utama
+- **CTA Box**: Ajakan untuk request demo
 
 ### 📋 How It Works Section
-- **4 Langkah Proses**:
-  1. Booking Servis
-  2. Bawa Kendaraan
-  3. Inspeksi & Servis
-  4. Selesai & Garansi
-- **Timeline Animation**: Animasi connection line antar langkah
-- **Success Stats**: Statistik keberhasilan PSC Harjo
+- **4 Langkah Emergency Response**:
+  1. Emergency Call Received
+  2. Dispatch & Navigation
+  3. Real-time Response
+  4. Patient Care & Handover
+- **Three Implementation Concepts**:
+  - CB1 - Fitur Sederhana
+  - CB2 - Fitur Kompleks Terintegrasi Penuh
+  - CB3 - Fitur Terbatas Berbasis Lokasi
+- **Performance Stats**: Response time, system uptime, monitoring
 
 ### 💬 Testimonials Section
-- **6 Testimoni Pelanggan**: Pengalaman nyata dari pelanggan
+- **6 Testimoni Stakeholder**: Pengalaman dari dokter, driver ambulans, user
 - **Rating System**: Bintang rating untuk setiap testimoni
-- **Service Info**: Jenis servis dan kendaraan
-- **Trust Indicators**: Jumlah pelanggan di berbagai kota
+- **Role & Institution**: Posisi dan institusi pemberi testimoni
+- **Stakeholder Coverage**: Coverage nationwide dengan statistik
 
 ### 📞 Footer
-- **Company Info**: Informasi tentang PSC Harjo
-- **Quick Links**: Navigasi cepat
-- **Services**: Daftar layanan yang tersedia
-- **Contact Info**: Hotline, email, dan alamat
-- **Newsletter Signup**: Form berlangganan newsletter
+- **Company Info**: Informasi tentang EMR System
+- **System Components**: Detail tiga komponen sistem
+- **Solutions**: Navigasi ke konsep CB1, CB2, CB3
+- **Emergency Contact**: Hotline 119, emergency medical, email
+- **Implementation Concepts**: Preview tiga konsep implementasi
 - **Social Media Links**: Link ke sosial media
-- **Floating CTA Button**: Tombol booking servis yang selalu visible
+- **Floating Emergency Button**: Tombol emergency call yang selalu visible
 
-### 📝 Service Modal
+### 📝 Demo Request Modal
 - **Personal Information**: Nama, telepon, email
-- **Vehicle Information**: Jenis dan model kendaraan
-- **Service Type Selection**: Pilihan jenis servis
-- **Date & Time Picker**: Pilihan tanggal dan waktu servis
-- **Pickup Service Option**: Opsi layanan jemput
-- **Additional Info**: Kolom untuk informasi tambahan
-- **Contact Information**: Info kontak untuk bantuan segera
+- **Institution Information**: Jenis institusi, nama, posisi
+- **Concept Interest**: CB1, CB2, CB3 selection
+- **System Components**: User App, Ambulance App, Command Center
+- **Project Details**: Estimasi user, timeline, budget range
+- **Specific Requirements**: Text area untuk kebutuhan spesifik
+- **Contact Preference**: Metode kontak dan waktu demo
 
 ## 🎨 Customization
 
@@ -117,26 +124,26 @@ npm run preview
 Edit di `src/index.css`:
 ```css
 :root {
-  --primary-blue: #2563eb;
-  --accent-cyan: #06b6d4;
-  --success-green: #10b981;
-  --warning-yellow: #fbbf24;
+  --primary-red: #dc2626;
+  --accent-pink: #ec4899;
+  --medical-blue: #2563eb;
+  --emergency-orange: #ea580c;
 }
 ```
 
 ### Mengubah Logo
-Ganti file di `public/logo.svg` dengan logo PSC Harjo Anda.
+Ganti file di `public/logo.svg` dengan logo EMR System Anda.
 
-### Menambah Layanan Baru
-Edit di `src/components/ServiceModal.jsx`:
+### Menambah Fitur Baru
+Edit di `src/components/FeaturesSection.jsx`:
 ```javascript
-const serviceTypes = [
-  // Existing types...
+const features = [
+  // Existing features...
   { 
-    id: 'new-service', 
     icon: NewIcon, 
-    label: 'Layanan Baru', 
-    description: 'Deskripsi layanan baru'
+    title: "Fitur Baru", 
+    description: "Deskripsi fitur baru",
+    color: "from-purple-500 to-indigo-500"
   }
 ]
 ```
@@ -144,9 +151,9 @@ const serviceTypes = [
 ### Kustom Animasi
 Tambah di `src/index.css`:
 ```css
-@keyframes custom-animation {
+@keyframes emergency-pulse {
   0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  50% { transform: scale(1.05); }
   100% { transform: scale(1); }
 }
 ```
@@ -158,18 +165,20 @@ src/
 ├── components/
 │   ├── HeroSection.jsx          # Hero section dengan animasi
 │   ├── FeaturesSection.jsx       # Features grid dengan hover effects
-│   ├── HowItWorksSection.jsx    # Process timeline
+│   ├── HowItWorksSection.jsx    # Process timeline & concepts
 │   ├── TestimonialsSection.jsx   # Testimonials grid
-│   ├── Footer.jsx               # Footer dengan semua informasi
-│   └── ServiceModal.jsx         # Booking form modal
-├── App.jsx                      # Main app component
-├── main.jsx                     # App entry point
+│   ├── Footer.jsx              # Footer dengan informasi sistem
+│   └── ServiceModal.jsx         # Demo request form modal
+├── App.jsx                     # Main app component
+├── main.jsx                    # App entry point
 └── index.css                   # Global styles & animations
 ```
 
 ## 🔧 Fitur Pengembangan
 
 ### Animations
+- Emergency-themed animations
+- Pulse effects untuk emergency elements
 - Smooth scroll animations
 - Hover effects pada semua interactive elements
 - Stagger animations untuk list items
@@ -188,29 +197,31 @@ src/
 
 ## 🚨 Demo Scenarios
 
-### Scenario 1: Booking Servis Berkala
-1. Klik "Booking Servis" di hero section
-2. Isi formulir dengan data pribadi
-3. Pilih jenis kendaraan dan model
-4. Pilih jenis servis "Servis Berkala"
-5. Pilih tanggal dan waktu
-6. Submit booking
+### Scenario 1: Request Demo CB2 System
+1. Klik "Demo Sistem" di hero section
+2. Isi form dengan data institusi rumah sakit
+3. Pilih konsep "CB2 - Terintegrasi Penuh"
+4. Pilih semua komponen sistem
+5. Isi estimasi user dan timeline
+6. Submit untuk konsultasi
 
-### Scenario 2: Layanan Darurat
-1. Klik tombol "Booking Servis" di floating button
-2. Pilih jenis servis "Layanan Darurat"
-3. Centang opsi "Layanan Jemput"
-4. Isi alamat penjemputan
-5. Submit untuk bantuan segera
+### Scenario 2: Emergency Response Overview
+1. Lihat "System Components Preview" di hero
+2. Scroll ke "Features Terintegrasi"
+3. Lihat "Emergency Response Workflow"
+4. Bandingkan tiga konsep implementasi
+5. Klik floating "Emergency Call" button
 
 ## 🔮 Roadmap
 
-- [ ] Integration dengan booking system backend
-- [ ] Payment gateway untuk deposit
-- [ ] Live tracking status servis
-- [ ] Push notifications untuk update servis
-- [ ] Customer portal untuk history servis
-- [ ] Integration dengan WhatsApp untuk notifikasi
+- [ ] Integration dengan emergency dispatch system
+- [ ] Real-time GPS tracking implementation
+- [ ] Medical data integration APIs
+- [ ] Push notifications untuk emergency alerts
+- [ ] Admin portal untuk system management
+- [ ] Integration dengan hospital information systems
+- [ ] Mobile app development (Android)
+- [ ] Web dashboard backend integration
 
 ## 🤝 Contributing
 
@@ -227,12 +238,13 @@ This project is licensed under the MIT License.
 ## 📞 Support
 
 Untuk pertanyaan atau support, silakan hubungi:
-- Hotline: (021) 1234-5678
-- Email: info@pscharjo.com
-- Lokasi: Jl. Harjo Utama No. 123, Jakarta Selatan
+- Hotline Emergency: 119
+- Emergency Medical: (021) 1234-5678
+- Email: info@emrsystem.com
+- Head Office: Jl. Emergency Medical No. 119, Jakarta Pusat
 
 ---
 
-**Made with ❤️ for PSC Harjo**
+**Made with ❤️ for Emergency Medical Response**
 
-PSC Harjo - Pusat Servis Cepat. Solusi servis kendaraan terpercaya dengan teknisi profesional dan layanan 24/7.
+EMR System - Emergency Medical Response Terintegrasi. Solusi lengkap untuk emergency medical response dengan response time < 5 menit dan monitoring 24/7.
