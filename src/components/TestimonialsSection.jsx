@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Star, Quote, MapPin, Clock, Heart } from 'lucide-react'
+import { Star, Quote, MapPin, Car, Wrench, CheckCircle } from 'lucide-react'
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -8,54 +8,54 @@ const TestimonialsSection = () => {
       name: "Budi Santoso",
       location: "Jakarta Selatan",
       rating: 5,
-      text: "Response time mereka sangat cepat! Dalam 2 menit ambulans sudah sampai. Tim medis的专业 dan照顾得很周到. Sangat berterima kasih untuk bantuan darurat ini.",
-      emergency: "Heart Attack",
-      time: "Response dalam 2 menit",
+      text: "Servis di PSC Harjo sangat memuaskan! Pengerjaan cepat dan rapi. Teknisi sangat profesional dan menjelaskan kondisi kendaraan dengan detail. Sangat recommended!",
+      service: "Servis Berkala",
+      vehicle: "Toyota Avanza",
       avatar: "BS"
     },
     {
       name: "Sari Indrawati",
       location: "Surabaya",
       rating: 5,
-      text: "Ketika anak saya mengalami accidente, mereka datang dengan sangat cepat. Sistem tracking GPS memudahkan keluarga untuk mengikuti perjalanan ambulans. Pelayanannya luar biasa!",
-      emergency: "Accident",
-      time: "Response dalam 3 menit",
+      text: "Ketika mobil mogok di jalan, PSC Harjo datang dengan sangat cepat. Layanan 24/7 mereka benar-benar penyelamat! Teknisi berpengalaman dan sparepart original.",
+      service: "Layanan Darurat",
+      vehicle: "Honda Jazz",
       avatar: "SI"
     },
     {
       name: "Ahmad Rizki",
       location: "Bandung",
       rating: 5,
-      text: "Tim medis mereka sangat berpengalaman dan calm dalam situasi darurat. Mereka tidak hanya memberikan perawatan medis tapi juga memberikan ketenangan kepada keluarga.",
-      emergency: "Stroke",
-      time: "Response dalam 2.5 menit",
+      text: "Sudah 5 tahun jadi langganan PSC Harjo. Kualitas servis konsisten dan harga sangat terjangkau. Mereka selalu memberikan solusi terbaik untuk kendaraan saya.",
+      service: "Overhaul Mesin",
+      vehicle: "Mitsubishi Pajero",
       avatar: "AR"
     },
     {
       name: "Maya Sari",
       location: "Medan",
       rating: 5,
-      text: "Aplikasi mobile mereka sangat user-friendly. Mudah untuk melaporkan emergency dan sistem AI mereka sangat akurat dalam menganalisis lokasi dan severity kondisi.",
-      emergency: "Fall Injury",
-      time: "Response dalam 2 menit",
+      text: "Booking servis sangat mudah dan praktis. Workshop bersih dan nyaman. Teknisi sangat teliti dalam pengerjaan. Kendaraan kembali seperti baru setelah servis!",
+      service: "Servis Lengkap",
+      vehicle: "Daihatsu Xenia",
       avatar: "MS"
     },
     {
       name: "Rudi Hermawan",
       location: "Makassar",
       rating: 5,
-      text: "Pelayanan 24/7 mereka benar-benar dapat diandalkan. Minggu dini hari mereka tetap merespon dengan cepat. Teknologi dan service quality mereka terdepan di Indonesia.",
-      emergency: "Respiratory Emergency",
-      time: "Response dalam 3 menit",
+      text: "Ganti oli dan tune-up di PSC Harjo hasilnya luar biasa. Performa motor jadi lebih responsif dan irit bensin. Pelayanan ramah dan profesional.",
+      service: "Ganti Oli & Tune-up",
+      vehicle: "Yamaha NMAX",
       avatar: "RH"
     },
     {
       name: "Dewi Lestari",
       location: "Palembang",
       rating: 5,
-      text: "Dalam momento krisis, mereka memberikan harapan. Tim mereka tidak hanya cepat tapi juga sangat care dan professional. Highly recommended untuk emergency service!",
-      emergency: "Pregnancy Emergency",
-      time: "Response dalam 2.5 menit",
+      text: "Servis AC mobil sangat memuaskan. AC kembali dingin maksimal dan harganya sangat reasonable. Teknisi menjelaskan kerusakan dengan jujur dan transparan.",
+      service: "Servis AC",
+      vehicle: "Honda CR-V",
       avatar: "DL"
     }
   ]
@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-red-50 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-cyan-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -101,24 +101,24 @@ const TestimonialsSection = () => {
           viewport={{ once: true }}
         >
           <motion.div
-            className="inline-flex items-center space-x-2 bg-yellow-100 text-yellow-700 rounded-full px-6 py-2 mb-6"
+            className="inline-flex items-center space-x-2 bg-cyan-100 text-cyan-700 rounded-full px-6 py-2 mb-6"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <Heart className="w-4 h-4" />
-            <span className="text-sm font-semibold">Testimoni Pengguna</span>
+            <Star className="w-4 h-4" />
+            <span className="text-sm font-semibold">Testimoni Pelanggan</span>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
             Dipercaya Ribuan
-            <span className="text-red-600"> Nyawa</span>
+            <span className="text-blue-600"> Pelanggan</span>
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-           听听 mereka yang pernah merasakan layanan emergency kami. 
-            Setiap cerita adalah bukti komitmen kami untuk menyelamatkan nyawa
+            Dengarkan pengalaman mereka yang telah mempercayakan kendaraannya kepada PSC Harjo. 
+            Setiap testimoni adalah bukti komitmen kami untuk memberikan pelayanan terbaik
           </p>
         </motion.div>
 
@@ -139,7 +139,7 @@ const TestimonialsSection = () => {
             >
               <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full relative">
                 {/* Quote Icon */}
-                <div className="absolute -top-4 -left-4 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
                   <Quote className="w-4 h-4 text-white" />
                 </div>
 
@@ -155,18 +155,18 @@ const TestimonialsSection = () => {
                   "{testimonial.text}"
                 </p>
 
-                {/* Emergency Info */}
-                <div className="bg-red-50 rounded-lg p-3 mb-4">
+                {/* Service Info */}
+                <div className="bg-blue-50 rounded-lg p-3 mb-4">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-red-700 font-medium">{testimonial.emergency}</span>
-                    <span className="text-red-600">{testimonial.time}</span>
+                    <span className="text-blue-700 font-medium">{testimonial.service}</span>
+                    <span className="text-blue-600">{testimonial.vehicle}</span>
                   </div>
                 </div>
 
                 {/* User Info */}
                 <div className="flex items-center space-x-3">
                   {/* Avatar */}
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold">
                     {testimonial.avatar}
                   </div>
 
@@ -181,7 +181,7 @@ const TestimonialsSection = () => {
                 </div>
 
                 {/* Hover Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </div>
             </motion.div>
           ))}
@@ -197,19 +197,19 @@ const TestimonialsSection = () => {
         >
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-800 mb-2">
-              Dipercaya Oleh Seluruh Indonesia
+              Dipercaya di Seluruh Indonesia
             </h3>
             <p className="text-gray-600">
-              Ribuan pengguna di berbagai kota mempercayakan layanan emergency mereka kepada kami
+              Ribuan pelanggan di berbagai kota mempercayakan kendaraannya kepada PSC Harjo
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { city: "Jakarta", users: "15,000+", flag: "🇮🇩" },
-              { city: "Surabaya", users: "8,500+", flag: "🇮🇩" },
-              { city: "Bandung", users: "6,200+", flag: "🇮🇩" },
-              { city: "Medan", users: "4,800+", flag: "🇮🇩" }
+              { city: "Jakarta", customers: "15,000+", icon: <Car className="w-3 h-3" /> },
+              { city: "Surabaya", customers: "8,500+", icon: <Wrench className="w-3 h-3" /> },
+              { city: "Bandung", customers: "6,200+", icon: <Car className="w-3 h-3" /> },
+              { city: "Medan", customers: "4,800+", icon: <CheckCircle className="w-3 h-3" /> }
             ].map((city, index) => (
               <motion.div
                 key={index}
@@ -219,9 +219,11 @@ const TestimonialsSection = () => {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <div className="text-3xl mb-2">{city.flag}</div>
-                <div className="text-lg font-bold text-gray-800">{city.users}</div>
-                <div className="text-sm text-gray-600">Trusted Users in {city.city}</div>
+                <div className="flex justify-center mb-2 text-blue-500">
+                  {city.icon}
+                </div>
+                <div className="text-lg font-bold text-gray-800">{city.customers}</div>
+                <div className="text-sm text-gray-600">Pelanggan di {city.city}</div>
               </motion.div>
             ))}
           </div>

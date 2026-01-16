@@ -1,32 +1,26 @@
-# 🚑 911 Emergency Dashboard
+# 🔧 PSC Harjo - Pusat Servis Cepat
 
-Dashboard darurat 911 yang dibuat dengan React dan animasi menarik untuk tracking ambulans dan user dalam situasi emergency.
+Landing page untuk PSC Harjo - Pusat Servis Cepat yang menyediakan layanan servis kendaraan terpercaya dengan teknisi profesional, pengerjaan cepat, dan garansi terjamin.
 
 ## ✨ Fitur Utama
 
-### 🎯 Dashboard 911 Komprehensif
-- **Real-time Monitoring**: Tracking ambulans dan emergency calls secara real-time
-- **Interactive Map**: Peta interaktif dengan animasi bergerak untuk ambulans
-- **Command Center**: Pusat komando untuk dispatch dan monitoring
-- **User Panel**: Interface untuk emergency requests dari pengguna
-
-### 🚑 Animasi Ambulans
-- **Movement Animation**: Ambulans bergerak dengan animasi smooth
-- **Status Indicators**: Visual status (available, dispatched, en-route, returning)
-- **Route Animation**: Animasi jalur saat ambulans menuju lokasi emergency
-- **Emergency Response**: Animasi khusus saat dispatch dan response
-
-### 👤 User Interface
-- **Emergency Button**: Tombol darurat dengan animasi pulse
-- **Quick Request**: Form emergency request dengan validasi
-- **Location Pin**: Pin lokasi user dengan animasi ping effect
-- **Status Tracking**: Tracking status emergency dari request hingga resolved
+### 🎯 Landing Page Modern
+- **Hero Section**: Header menarik dengan animasi dan CTA untuk booking servis
+- **Features Section**: Menampilkan keunggulan layanan PSC Harjo
+- **How It Works Section**: Alur proses servis yang jelas dan mudah dipahami
+- **Testimonials Section**: Testimoni pelanggan yang puas dengan layanan kami
+- **Footer**: Informasi kontak, layanan, dan sosial media
 
 ### 🎨 Animasi Menarik
-- **Pulse Effects**: Animasi berdenyut untuk emergency states
-- **Smooth Transitions**: Transisi halus antar komponen
-- **Hover Effects**: Interaksi hover yang responsif
-- **Loading States**: Animasi loading yang smooth
+- **Smooth Animations**: Transisi halus menggunakan Framer Motion
+- **Hover Effects**: Interaksi hover yang responsif pada cards dan buttons
+- **Scroll Animations**: Animasi saat scroll ke bawah untuk enhanced user experience
+- **Micro-interactions**: Animasi detail untuk interaksi kecil
+
+### 📱 Responsive Design
+- **Mobile First**: Optimasi untuk tampilan mobile
+- **Desktop Adaptation**: Layout 3-column untuk desktop
+- **Tablet Support**: Grid adaptif untuk berbagai ukuran layar
 
 ## 🛠️ Teknologi
 
@@ -46,7 +40,7 @@ Dashboard darurat 911 yang dibuat dengan React dan animasi menarik untuk trackin
 
 ```bash
 # Clone atau copy project
-cd 911-emergency-dashboard
+cd psc-harjo
 
 # Install dependencies
 npm install
@@ -64,65 +58,58 @@ npm run build
 npm run preview
 ```
 
-## 📱 Fitur Dashboard
+## 📱 Fitur Landing Page
 
-### 🗺️ Ambulance Tracker (Center Panel)
-- **Live Map**: Peta dengan grid dan jalan simulasi
-- **Ambulance Markers**: Marker ambulans dengan status colors
-- **Emergency Pins**: Pin lokasi emergency dengan animasi
-- **Route Animation**: Animasi jalur perjalanan ambulans
-- **Interactive**: Click ambulans untuk detail info
+### 🚀 Hero Section
+- **Headline Menarik**: "PSC Harjo - Pusat Servis Cepat"
+- **Subheadline**: Penjelasan singkat tentang layanan
+- **Stats Row**: Menampilkan tahun pengalaman, pelanggan puas, dan layanan 24/7
+- **CTA Buttons**: Tombol "Booking Servis" dan "Lihat Layanan"
+- **Trust Indicators**: Badge garansi resmi, service cepat, teknisi berpengalaman
 
-### 👤 User Panel (Left Panel)  
-- **Emergency Button**: Tombol emergency dengan animasi pulse
-- **Quick Select**: Pilih jenis emergency (Heart Attack, Accident, Medical, etc.)
-- **Recent Calls**: History emergency calls terbaru
-- **Form Modal**: Modal form untuk detail emergency
+### ⭐ Features Section
+- **6 Fitur Utama**:
+  - Pengerjaan Cepat & Rapi
+  - Sparepart Original
+  - Layanan 24/7
+  - Teknisi Bersertifikat
+  - Semua Jenis Kendaraan
+  - Garansi Servis
+- **CTA Box**: Ajakan untuk menghubungi kami
+- **Hover Effects**: Animasi pada setiap feature card
 
-### 🎛️ Command Center (Right Panel)
-- **Active Emergencies**: List emergency yang sedang pending
-- **Fleet Status**: Status semua ambulans dalam fleet
-- **Quick Dispatch**: Interface dispatch ambulans cepat
-- **Real-time Updates**: Update status real-time
+### 📋 How It Works Section
+- **4 Langkah Proses**:
+  1. Booking Servis
+  2. Bawa Kendaraan
+  3. Inspeksi & Servis
+  4. Selesai & Garansi
+- **Timeline Animation**: Animasi connection line antar langkah
+- **Success Stats**: Statistik keberhasilan PSC Harjo
 
-### 📊 Statistics Panel (Bottom)
-- **Total Ambulances**: Jumlah total ambulans
-- **Available Units**: Unit yang siap siaga
-- **Pending Calls**: Emergency calls yang menunggu
-- **Response Rate**: Persentase response yang berhasil
+### 💬 Testimonials Section
+- **6 Testimoni Pelanggan**: Pengalaman nyata dari pelanggan
+- **Rating System**: Bintang rating untuk setiap testimoni
+- **Service Info**: Jenis servis dan kendaraan
+- **Trust Indicators**: Jumlah pelanggan di berbagai kota
 
-## 🎭 Jenis Animasi
+### 📞 Footer
+- **Company Info**: Informasi tentang PSC Harjo
+- **Quick Links**: Navigasi cepat
+- **Services**: Daftar layanan yang tersedia
+- **Contact Info**: Hotline, email, dan alamat
+- **Newsletter Signup**: Form berlangganan newsletter
+- **Social Media Links**: Link ke sosial media
+- **Floating CTA Button**: Tombol booking servis yang selalu visible
 
-### Emergency Animations
-- **Emergency Pulse**: Animasi berdenyut untuk tombol emergency
-- **User Ping**: Animasi ping untuk lokasi user
-- **Status Blinking**: Blinking untuk status active
-
-### Ambulance Animations  
-- **Movement**: Animasi gerakan ambulans di peta
-- **Route Following**: Animasi mengikuti jalur
-- **Status Change**: Transisi status (available → dispatched → en-route)
-
-### UI Animations
-- **Page Transitions**: Transisi antar halaman/modal
-- **Hover Effects**: Efek hover pada buttons dan cards
-- **Loading States**: Animasi loading yang smooth
-- **Micro-interactions**: Animasi detail untuk interaksi kecil
-
-## 🏗️ Struktur Komponen
-
-```
-src/
-├── components/
-│   ├── Dashboard.jsx          # Main dashboard layout
-│   ├── AmbulanceTracker.jsx   # Map & ambulance tracking
-│   ├── UserPanel.jsx          # Emergency requests panel
-│   ├── CommandCenter.jsx      # Command & control panel
-│   └── EmergencyModal.jsx     # Emergency form modal
-├── App.jsx                    # Main app component
-├── main.jsx                   # App entry point
-└── index.css                  # Global styles & animations
-```
+### 📝 Service Modal
+- **Personal Information**: Nama, telepon, email
+- **Vehicle Information**: Jenis dan model kendaraan
+- **Service Type Selection**: Pilihan jenis servis
+- **Date & Time Picker**: Pilihan tanggal dan waktu servis
+- **Pickup Service Option**: Opsi layanan jemput
+- **Additional Info**: Kolom untuk informasi tambahan
+- **Contact Information**: Info kontak untuk bantuan segera
 
 ## 🎨 Customization
 
@@ -130,23 +117,26 @@ src/
 Edit di `src/index.css`:
 ```css
 :root {
-  --emergency-red: #ef4444;
-  --ambulance-blue: #3b82f6;
-  --available-green: #10b981;
+  --primary-blue: #2563eb;
+  --accent-cyan: #06b6d4;
+  --success-green: #10b981;
+  --warning-yellow: #fbbf24;
 }
 ```
 
-### Menambah Jenis Emergency
-Edit di `src/components/EmergencyModal.jsx`:
+### Mengubah Logo
+Ganti file di `public/logo.svg` dengan logo PSC Harjo Anda.
+
+### Menambah Layanan Baru
+Edit di `src/components/ServiceModal.jsx`:
 ```javascript
-const emergencyTypes = [
+const serviceTypes = [
   // Existing types...
   { 
-    id: 'new-type', 
+    id: 'new-service', 
     icon: NewIcon, 
-    label: 'New Emergency', 
-    color: 'bg-purple-500',
-    priority: 'medium'
+    label: 'Layanan Baru', 
+    description: 'Deskripsi layanan baru'
   }
 ]
 ```
@@ -161,17 +151,34 @@ Tambah di `src/index.css`:
 }
 ```
 
+## 🏗️ Struktur Komponen
+
+```
+src/
+├── components/
+│   ├── HeroSection.jsx          # Hero section dengan animasi
+│   ├── FeaturesSection.jsx       # Features grid dengan hover effects
+│   ├── HowItWorksSection.jsx    # Process timeline
+│   ├── TestimonialsSection.jsx   # Testimonials grid
+│   ├── Footer.jsx               # Footer dengan semua informasi
+│   └── ServiceModal.jsx         # Booking form modal
+├── App.jsx                      # Main app component
+├── main.jsx                     # App entry point
+└── index.css                   # Global styles & animations
+```
+
 ## 🔧 Fitur Pengembangan
 
-### Real-time Simulation
-- Simulasi ambulans bergerak otomatis
-- Random emergency calls generator
-- Status transitions yang realistis
+### Animations
+- Smooth scroll animations
+- Hover effects pada semua interactive elements
+- Stagger animations untuk list items
+- Modal transitions yang smooth
 
 ### Responsive Design
-- Desktop: 3-column layout
-- Mobile: Single column stacked
+- Desktop: Multi-column layout
 - Tablet: Adaptive grid
+- Mobile: Single column stacked
 
 ### Accessibility
 - Keyboard navigation
@@ -181,32 +188,29 @@ Tambah di `src/index.css`:
 
 ## 🚨 Demo Scenarios
 
-### Scenario 1: Heart Attack Emergency
-1. Klik "Emergency" button
-2. Pilih "Heart Attack"
-3. Ambulance akan bergerak ke lokasi
-4. Status berubah: Available → Dispatched → En Route
+### Scenario 1: Booking Servis Berkala
+1. Klik "Booking Servis" di hero section
+2. Isi formulir dengan data pribadi
+3. Pilih jenis kendaraan dan model
+4. Pilih jenis servis "Servis Berkala"
+5. Pilih tanggal dan waktu
+6. Submit booking
 
-### Scenario 2: Multi-Emergency
-1. Buat multiple emergency calls
-2. Lihat bagaimana ambulans didispatch
-3. Monitor response time
-
-### Scenario 3: Command Center
-1. Buka Command Center panel
-2. Lihat fleet status
-3. Dispatch ambulans manual
-4. Monitor real-time updates
+### Scenario 2: Layanan Darurat
+1. Klik tombol "Booking Servis" di floating button
+2. Pilih jenis servis "Layanan Darurat"
+3. Centang opsi "Layanan Jemput"
+4. Isi alamat penjemputan
+5. Submit untuk bantuan segera
 
 ## 🔮 Roadmap
 
-- [ ] Real-time WebSocket integration
-- [ ] GPS location tracking
-- [ ] Voice communication
-- [ ] Hospital integration
-- [ ] Mobile responsive improvements
-- [ ] Push notifications
-- [ ] Historical data analytics
+- [ ] Integration dengan booking system backend
+- [ ] Payment gateway untuk deposit
+- [ ] Live tracking status servis
+- [ ] Push notifications untuk update servis
+- [ ] Customer portal untuk history servis
+- [ ] Integration dengan WhatsApp untuk notifikasi
 
 ## 🤝 Contributing
 
@@ -220,12 +224,15 @@ Tambah di `src/index.css`:
 
 This project is licensed under the MIT License.
 
-## 🆘 Support
+## 📞 Support
 
-Untuk emergency atau bug reports, silakan buat issue di repository ini.
+Untuk pertanyaan atau support, silakan hubungi:
+- Hotline: (021) 1234-5678
+- Email: info@pscharjo.com
+- Lokasi: Jl. Harjo Utama No. 123, Jakarta Selatan
 
 ---
 
-**Made with ❤️ for Emergency Response Systems**
+**Made with ❤️ for PSC Harjo**
 
-Dashboard 911 ini menyediakan interface yang user-friendly dan animasi yang menarik untuk membantu operator emergency services dalam menjalankan tugas mereka dengan lebih efisien.
+PSC Harjo - Pusat Servis Cepat. Solusi servis kendaraan terpercaya dengan teknisi profesional dan layanan 24/7.

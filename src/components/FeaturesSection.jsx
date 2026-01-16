@@ -1,43 +1,43 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Zap, Shield, Clock, Users, MapPin, Heart, Phone, Award } from 'lucide-react'
+import { Wrench, Clock, Award, Car, Shield, CheckCircle, Phone, Star } from 'lucide-react'
 
 const FeaturesSection = () => {
   const features = [
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Response Time Super Cepat",
-      description: "Average response time kurang dari 3 menit dengan teknologi AI-powered dispatch system",
-      color: "from-yellow-400 to-orange-500"
+      icon: <Wrench className="w-8 h-8" />,
+      title: "Pengerjaan Cepat & Rapi",
+      description: "Pengerjaan servis berkala selesai dalam 1-2 jam dengan standar kualitas tinggi dan jaminan kepuasan pelanggan",
+      color: "from-cyan-400 to-blue-500"
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Sistem Keamanan Terdepan",
-      description: "Teknologi enkripsi end-to-end dan sistem monitoring real-time untuk keamanan maksimal",
-      color: "from-blue-500 to-cyan-500"
+      title: "Sparepart Original",
+      description: "Kami hanya menggunakan sparepart original dan berkualitas untuk menjaga performa optimal kendaraan Anda",
+      color: "from-blue-500 to-indigo-500"
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      title: "Layanan 24/7 Non-Stop",
-      description: "Tim medis profesional dan dispatch operator tersedia 24 jam setiap hari sepanjang tahun",
+      title: "Layanan 24/7",
+      description: "Layanan darurat 24 jam untuk kondisi darurat seperti mogok di jalan atau kebutuhan emergency lainnya",
       color: "from-green-500 to-emerald-500"
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "Tim Medis Berpengalaman",
-      description: "Para medis bersertifikat dengan pengalaman darurat tinggi dan pelatihan continuous",
+      icon: <Award className="w-8 h-8" />,
+      title: "Teknisi Bersertifikat",
+      description: "Tim teknisi kami bersertifikat dan berpengalaman menangani berbagai jenis kendaraan dengan profesional",
       color: "from-purple-500 to-pink-500"
     },
     {
-      icon: <MapPin className="w-8 h-8" />,
-      title: "GPS Tracking Akurat",
-      description: "Real-time tracking dengan precision GPS untuk lokasi tepat dan rute tercepat",
-      color: "from-red-500 to-rose-500"
+      icon: <Car className="w-8 h-8" />,
+      title: "Semua Jenis Kendaraan",
+      description: "Melayani servis untuk mobil, motor, dan kendaraan komersial dari berbagai merek dan model",
+      color: "from-red-500 to-orange-500"
     },
     {
-      icon: <Heart className="w-8 h-8" />,
-      title: "Care & Compassion",
-      description: "Pendekatan humanis dengan care tinggi untuk pasien dan keluarga dalam situasi darurat",
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: "Garansi Servis",
+      description: "Setiap servis kami berikan garansi untuk ketenangan pikiran dan kepuasan pelanggan penuh",
       color: "from-pink-500 to-rose-500"
     }
   ]
@@ -62,24 +62,24 @@ const FeaturesSection = () => {
           viewport={{ once: true }}
         >
           <motion.div
-            className="inline-flex items-center space-x-2 bg-red-100 text-red-700 rounded-full px-6 py-2 mb-6"
+            className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 rounded-full px-6 py-2 mb-6"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <Award className="w-4 h-4" />
-            <span className="text-sm font-semibold">Mengapa Memilih Kami</span>
+            <Star className="w-4 h-4" />
+            <span className="text-sm font-semibold">Kenapa Memilih Kami</span>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Layanan Emergency
-            <span className="text-red-600"> Terdepan</span>
+            Layanan Servis
+            <span className="text-blue-600"> Terlengkap</span>
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Dengan teknologi terdepan dan tim berpengalaman, kami memberikan layanan darurat 
-            yang tidak hanya cepat, tetapi juga aman, terpercaya, dan penuh compassion
+            Dengan pengalaman lebih dari 15 tahun, PSC Harjo hadir memberikan layanan servis 
+            berkualitas tinggi dengan harga terjangkau untuk semua kebutuhan kendaraan Anda
           </p>
         </motion.div>
 
@@ -102,7 +102,7 @@ const FeaturesSection = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-red-600 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-blue-600 transition-colors duration-300">
                   {feature.title}
                 </h3>
                 
@@ -111,7 +111,7 @@ const FeaturesSection = () => {
                 </p>
 
                 {/* Hover effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               </div>
             </motion.div>
           ))}
@@ -129,20 +129,20 @@ const FeaturesSection = () => {
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               <div className="text-left">
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                  Siap untuk emergency response terbaik?
+                  Siap merawat kendaraan Anda?
                 </h3>
                 <p className="text-gray-600">
-                  Bergabunglah dengan ribuan orang yang mempercayai layanan kami
+                  Hubungi kami sekarang dan dapatkan penawaran spesial untuk servis pertama Anda
                 </p>
               </div>
               
               <motion.button
-                className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full text-lg flex items-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 whitespace-nowrap"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg flex items-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 whitespace-nowrap"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Phone className="w-5 h-5" />
-                <span>Emergency Hotline</span>
+                <span>Hubungi Kami</span>
               </motion.button>
             </div>
           </div>
