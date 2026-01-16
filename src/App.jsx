@@ -5,22 +5,21 @@ import FeaturesSection from './components/FeaturesSection'
 import HowItWorksSection from './components/HowItWorksSection'
 import TestimonialsSection from './components/TestimonialsSection'
 import Footer from './components/Footer'
-import EmergencyModal from './components/EmergencyModal'
+import ServiceModal from './components/ServiceModal'
 
 function App() {
-  const [showEmergencyModal, setShowEmergencyModal] = useState(false)
+  const [showServiceModal, setShowServiceModal] = useState(false)
 
-  const handleEmergencyCall = (callData) => {
-    console.log('Emergency call submitted:', callData)
-    setShowEmergencyModal(false)
-    // Here you would typically handle the emergency call submission
-    // For now, we'll just close the modal
+  const handleServiceRequest = (requestData) => {
+    console.log('Service request submitted:', requestData)
+    setShowServiceModal(false)
+    // Handle service request submission here
   }
 
   return (
     <div className="landing-container">
       {/* Hero Section */}
-      <HeroSection onEmergencyClick={() => setShowEmergencyModal(true)} />
+      <HeroSection onServiceClick={() => setShowServiceModal(true)} />
       
       {/* Features Section */}
       <FeaturesSection />
@@ -34,12 +33,12 @@ function App() {
       {/* Footer */}
       <Footer />
       
-      {/* Emergency Modal */}
+      {/* Service Modal */}
       <AnimatePresence>
-        {showEmergencyModal && (
-          <EmergencyModal
-            onClose={() => setShowEmergencyModal(false)}
-            onSubmit={handleEmergencyCall}
+        {showServiceModal && (
+          <ServiceModal
+            onClose={() => setShowServiceModal(false)}
+            onSubmit={handleServiceRequest}
           />
         )}
       </AnimatePresence>
