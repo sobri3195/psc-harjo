@@ -4,11 +4,9 @@ import {
   X, 
   Heart, 
   Activity, 
-  Smartphone, 
   Monitor,
   Phone, 
   Mail, 
-  MapPin, 
   Clock, 
   Users, 
   CheckCircle,
@@ -37,6 +35,14 @@ const ServiceModal = ({ onClose, onSubmit }) => {
     preferredTime: ''
   })
 
+
+
+  const [errors, setErrors] = useState({
+    conceptInterest: '',
+    systemComponents: ''
+  })
+
+  const today = new Date().toISOString().split('T')[0]
   const institutionTypes = [
     { id: 'hospital', icon: <Heart className="w-6 h-6" />, label: 'Rumah Sakit', description: 'Rumah sakit umum atau swasta' },
     { id: 'clinic', icon: <Activity className="w-6 h-6" />, label: 'Klinik', description: 'Klinik atau puskesmas' },
@@ -67,6 +73,18 @@ const ServiceModal = ({ onClose, onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    const nextErrors = {
+      conceptInterest: formData.conceptInterest ? '' : 'Silakan pilih konsep implementasi.',
+      systemComponents: formData.systemComponents.length > 0 ? '' : 'Pilih minimal satu komponen sistem.'
+    }
+
+    setErrors(nextErrors)
+
+    if (nextErrors.conceptInterest || nextErrors.systemComponents) {
+      return
+    }
+
     onSubmit(formData)
   }
 
@@ -228,7 +246,10 @@ const ServiceModal = ({ onClose, onSubmit }) => {
                   <motion.button
                     key={concept.id}
                     type="button"
-                    onClick={() => setFormData(prev => ({ ...prev, conceptInterest: concept.id }))}
+                    onClick={() => {
+                      setFormData(prev => ({ ...prev, conceptInterest: concept.id }))
+                      setErrors(prev => ({ ...prev, conceptInterest: '' }))
+                    }}
                     className={`p-4 rounded-xl border-2 text-left transition-all duration-200 ${
                       formData.conceptInterest === concept.id
                         ? 'border-red-600 bg-red-50'
@@ -256,6 +277,9 @@ const ServiceModal = ({ onClose, onSubmit }) => {
                   </motion.button>
                 ))}
               </div>
+              {errors.conceptInterest && (
+                <p className="text-sm text-red-600 mt-3">{errors.conceptInterest}</p>
+              )}
             </div>
 
             {/* System Components */}
@@ -279,7 +303,12 @@ const ServiceModal = ({ onClose, onSubmit }) => {
                       <input
                         type="checkbox"
                         checked={formData.systemComponents.includes(component.id)}
-                        onChange={(e) => handleComponentChange(component.id, e.target.checked)}
+                        onChange={(e) => {
+                          handleComponentChange(component.id, e.target.checked)
+                          if (e.target.checked) {
+                            setErrors(prev => ({ ...prev, systemComponents: '' }))
+                          }
+                        }}
                         className="mt-1 w-5 h-5 text-red-600 rounded focus:ring-red-500"
                       />
                       <div className="flex-1">
@@ -290,6 +319,9 @@ const ServiceModal = ({ onClose, onSubmit }) => {
                   </motion.label>
                 ))}
               </div>
+              {errors.systemComponents && (
+                <p className="text-sm text-red-600 mt-3">{errors.systemComponents}</p>
+              )}
             </div>
 
             {/* Project Details */}
@@ -387,6 +419,7 @@ const ServiceModal = ({ onClose, onSubmit }) => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">Waktu Preferensi untuk Demo</label>
                   <input
                     type="date"
+                    min={today}
                     name="preferredDate"
                     value={formData.preferredDate}
                     onChange={handleChange}

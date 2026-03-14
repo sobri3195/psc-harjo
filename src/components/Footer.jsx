@@ -26,12 +26,12 @@ const Footer = () => {
   ]
 
   const quickLinks = [
-    { label: "User App", href: "#" },
-    { label: "Ambulance App", href: "#" },
-    { label: "Command Center", href: "#" },
-    { label: "CB1 Concept", href: "#" },
-    { label: "CB2 Concept", href: "#" },
-    { label: "CB3 Concept", href: "#" }
+    { label: "User App", href: "#features" },
+    { label: "Ambulance App", href: "#features" },
+    { label: "Command Center", href: "#features" },
+    { label: "CB1 Concept", href: "#concept-animation" },
+    { label: "CB2 Concept", href: "#concept-animation" },
+    { label: "CB3 Concept", href: "#concept-animation" }
   ]
 
   const services = [
@@ -69,7 +69,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-gray-900 text-white relative overflow-hidden">
+    <footer id="contact" className="bg-gray-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

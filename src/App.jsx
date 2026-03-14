@@ -11,20 +11,38 @@ import FloatingActionButton from './components/FloatingActionButton'
 
 function App() {
   const [showServiceModal, setShowServiceModal] = useState(false)
+  const [submissionMessage, setSubmissionMessage] = useState('')
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
 
   const handleServiceRequest = (requestData) => {
     console.log('Service request submitted:', requestData)
+    setSubmissionMessage('Terima kasih! Request demo Anda berhasil dikirim. Tim kami akan menghubungi Anda secepatnya.')
+    setTimeout(() => setSubmissionMessage(''), 4000)
     setShowServiceModal(false)
-    // Handle service request submission here
   }
 
   return (
     <div className="landing-container">
+      {submissionMessage && (
+        <div className="fixed top-4 left-1/2 -translate-x-1/2 z-[60] bg-emerald-600 text-white px-6 py-3 rounded-full shadow-xl text-sm sm:text-base text-center">
+          {submissionMessage}
+        </div>
+      )}
+
       {/* Hero Section */}
-      <HeroSection onServiceClick={() => setShowServiceModal(true)} />
+      <HeroSection
+        onServiceClick={() => setShowServiceModal(true)}
+        onViewConceptClick={() => scrollToSection('concept-animation')}
+      />
       
       {/* Features Section */}
-      <FeaturesSection />
+      <FeaturesSection onServiceClick={() => setShowServiceModal(true)} />
       
       {/* Concept Animation Section */}
       <ConceptAnimationSection />

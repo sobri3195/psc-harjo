@@ -17,7 +17,7 @@ import {
   Monitor
 } from 'lucide-react'
 
-const FeaturesSection = () => {
+const FeaturesSection = ({ onServiceClick }) => {
   const features = [
     {
       icon: <Smartphone className="w-8 h-8" />,
@@ -76,7 +76,7 @@ const FeaturesSection = () => {
   ]
 
   return (
-    <section className="py-12 sm:py-20 bg-gray-50 relative overflow-hidden">
+    <section id="features" className="py-12 sm:py-20 bg-gray-50 relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -206,6 +206,7 @@ const FeaturesSection = () => {
                 className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg flex items-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 whitespace-nowrap w-full sm:w-auto max-w-sm md:max-w-none"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={onServiceClick}
               >
                 <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>Request Demo</span>
