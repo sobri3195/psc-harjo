@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Heart, Clock, Shield, ArrowRight, Zap, Users, Activity, Smartphone } from 'lucide-react'
 
-const HeroSection = ({ onServiceClick }) => {
+const HeroSection = ({ onServiceClick, onViewConceptClick }) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background dengan gradient medis */}
@@ -148,6 +148,7 @@ const HeroSection = ({ onServiceClick }) => {
               className="border-2 border-white/30 hover:border-white/60 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg backdrop-blur-sm hover:bg-white/10 transform hover:scale-105 transition-all duration-200 w-full sm:w-auto max-w-sm"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={onViewConceptClick}
             >
               Lihat Konsep
             </motion.button>

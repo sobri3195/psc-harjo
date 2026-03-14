@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
   }
 
   return (
-    <section className="py-12 sm:py-20 bg-gradient-to-br from-red-50 via-white to-pink-50 relative overflow-hidden">
+    <section id="testimonials" className="py-12 sm:py-20 bg-gradient-to-br from-red-50 via-white to-pink-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

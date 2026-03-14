@@ -21,7 +21,7 @@ const HowItWorksSection = () => {
     {
       icon: <Phone className="w-8 h-8" />,
       title: "Emergency Call Received",
-      description: "Call center menerima panggilan darurat via User App, telepon, atau sistem报警. Informasi lokasi dan kondisi pasien langsung terdeteksi otomatis",
+      description: "Call center menerima panggilan darurat via User App, telepon, atau sistem notifikasi darurat. Informasi lokasi dan kondisi pasien langsung terdeteksi otomatis",
       time: "< 30 detik",
       color: "from-red-500 to-pink-500"
     },
@@ -42,7 +42,7 @@ const HowItWorksSection = () => {
     {
       icon: <Heart className="w-8 h-8" />,
       title: "Patient Care & Handover",
-      description: "Tim medis memberikan perawatan pra-rumah sakit,数据传输 ke hospital, dan handover informasi lengkap untuk treatment lanjutan",
+      description: "Tim medis memberikan perawatan pra-rumah sakit, data terkirim ke rumah sakit, dan handover informasi lengkap untuk perawatan lanjutan",
       time: "Real-time",
       color: "from-purple-500 to-indigo-500"
     }
@@ -76,7 +76,7 @@ const HowItWorksSection = () => {
   ]
 
   return (
-    <section className="py-12 sm:py-20 bg-white relative overflow-hidden">
+    <section id="how-it-works" className="py-12 sm:py-20 bg-white relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-20 right-20 w-32 sm:w-72 h-32 sm:h-72 bg-red-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>

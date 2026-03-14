@@ -413,7 +413,7 @@ const ConceptAnimationSection = () => {
   )
 
   return (
-    <section className="py-12 sm:py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="concept-animation" className="py-12 sm:py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-20 w-32 sm:w-64 h-32 sm:h-64 bg-red-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
